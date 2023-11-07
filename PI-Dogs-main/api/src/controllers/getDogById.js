@@ -14,9 +14,9 @@ const getDogById = async (idRaza, source) => {
     dogData = {
       id: responseData.id,
       name: responseData.name,
-      height: responseData.height.metric.split(" - "),
-      weight: responseData.weight.metric.split(" - "),
-      temperaments: responseData.temperament.split(", "),
+      height: responseData.height.metric,
+      weight: responseData.weight.metric,
+      temperaments: responseData.temperament,
       life_span: responseData.life_span,
       image: `https://cdn2.thedogapi.com/images/${responseData.reference_image_id}.jpg`,
     };

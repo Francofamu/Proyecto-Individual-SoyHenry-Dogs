@@ -18,9 +18,9 @@ const infoClener = (array) => array.map(el => {
       return {
         id: el.id,
         name: el.name,
-        height: heightArray,
-        weight: weightArray,
-        temperaments: temperamentArray,
+        height: el.height.metric,
+        weight: el.weight.metric,
+        temperaments: el.temperament,
         life_span: el.life_span,
         image: el.image.url,
     }

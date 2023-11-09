@@ -28,15 +28,15 @@ const getDogById = async (idRaza, source) => {
       include: Temperament,
     });
 
-    const formattedDogs = dogDb ? [{
+    const formattedDogs = dogDb ? {
       id: dogDb.id,
       image: dogDb.image,
       name: dogDb.name,
-      height: dogDb.height,
-      weight: dogDb.weight,
+      height: (dogDb.height).join("-"),
+      weight: (dogDb.weight).join("-"),
       life_span: dogDb.life_span,
-      temperaments: dogDb.Temperaments.map((temperament) => temperament.name)
-    }] : [];
+      temperaments: (dogDb.Temperaments.map((temperament) => temperament.name)).join(", ")
+    } : [];
 
     return formattedDogs;
   }

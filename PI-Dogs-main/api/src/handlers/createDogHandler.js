@@ -11,6 +11,7 @@ const createDogHandler = async (req, res) => {
             weight: [min_weight, max_weight],
             life_span: life_span,
             image: image,
+            origin: "db"
         });
         
         const associateTemperaments = await Temperament.findAll({

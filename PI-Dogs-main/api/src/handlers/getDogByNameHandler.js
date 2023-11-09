@@ -3,7 +3,7 @@ const getDogByName = require("../controllers/getDogsByName");
 
 
 const getDogByNameHandler = async(req,res) => {
-    const { name } = req.query;
+    const name = req.query.name;
   
     try {
       if(name) {

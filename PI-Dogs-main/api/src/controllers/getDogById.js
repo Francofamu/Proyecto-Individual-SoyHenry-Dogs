@@ -32,8 +32,8 @@ const getDogById = async (idRaza, source) => {
       id: dogDb.id,
       image: dogDb.image,
       name: dogDb.name,
-      height: (dogDb.height).join("-"),
-      weight: (dogDb.weight).join("-"),
+      height: (dogDb.height).join(" - "),
+      weight: (dogDb.weight).join(" - "),
       life_span: dogDb.life_span,
       temperaments: (dogDb.Temperaments.map((temperament) => temperament.name)).join(", ")
     } : [];

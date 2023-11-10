@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { MY_API_KEY } = process.env;
+
 // Handlers
 const getAllDogsHandler = require('../handlers/getAllDogsHandler');
 const getDogByIdHandler = require('../handlers/getDogByIdHandler');
@@ -11,10 +11,6 @@ const createDogHandler = require('../handlers/createDogHandler');
 // Ejemplo: const authRouter = require('./auth.js');
 
 const router = Router();
-
-// Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
-let urLink = `https://api.thedogapi.com/v1/breeds?api_key=${MY_API_KEY}`
 
 
 /* routes */

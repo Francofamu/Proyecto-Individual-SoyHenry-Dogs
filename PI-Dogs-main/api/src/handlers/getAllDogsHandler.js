@@ -1,6 +1,4 @@
-const getAllBreeds = require("../controllers/getAllBreeds");
 const { getAllDogs } = require("../controllers/getAllDogs");
-const getDogByName = require("../controllers/getDogsByName");
 
 const getAllDogsHandler = async(req, res) =>{
   const origin = req.query.origin
